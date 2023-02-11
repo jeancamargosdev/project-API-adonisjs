@@ -35,5 +35,14 @@ export default class MomentsController {
             message: 'Momento criado com sucesso!',
             data: moment,
         }
+
     }
+    public async index() {
+        const moments = await Moment.all()
+
+        return{
+            data: moments,
+        }
+    }
+
 }
